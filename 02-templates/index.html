@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates en LitElement</title>
+</head>
+<body>
+    <h1>Templates en LitElement</h1>
+
+    <timestamp-to-date timestamp="45456565"></timestamp-to-date>
+    <hr>
+
+    <eit-input label="Nombre" placeholder="Escribe algo..."></eit-input>
+    <eit-input disabled></eit-input>
+    <eit-input disabled value="1234"></eit-input>
+    <eit-input label="Edad" value="56789"></eit-input>
+
+    <hr>
+
+    <tag-list tags='["PHP", "Javascript", "HTML", "Desarrollo"]'>
+        <p>
+            Parrafo
+        </p>
+    </tag-list>
+    
+    <hr>
+
+    <test-element></test-element>
+
+    <hr>
+
+    <menu-overlay id="menu1">
+        <p>Esto es el ligth DOM</p>
+        <button id="boton">Click</button>
+        <div slot="trigger">Menú</div>
+    </menu-overlay>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dicta assumenda amet voluptates iusto esse nobis optio, id sed velit aspernatur ab nemo totam quia odit aliquid voluptatum corporis eius!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dicta assumenda amet voluptates iusto esse nobis optio, id sed velit aspernatur ab nemo totam quia odit aliquid voluptatum corporis eius!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dicta assumenda amet voluptates iusto esse nobis optio, id sed velit aspernatur ab nemo totam quia odit aliquid voluptatum corporis eius!</p>
+    
+    <menu-overlay>
+        <p>Otro texto</p>
+        <span slot="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span>
+    </menu-overlay>
+
+    <script src="./src/index.js" type="module"></script>
+
+    <script>
+        document.getElementById('boton').addEventListener('click', function() {
+          document.getElementById('menu1').close();
+        });
+    </script>
+</body>
+</html>
