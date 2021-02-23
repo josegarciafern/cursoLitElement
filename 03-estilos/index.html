@@ -3,11 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Estilos LitElement</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* font-size: 18pt; */
+            --card-box-title-color: #6ac;
+            --eit-icon-color: red;
+        }
+        span {
+            color: blueviolet;
+        }
+        /* a {
+            color: orange;
+        } */
+        card-box {
+            background-color: #f0f0f0;
+            margin-bottom: .25rem;
+            /*--card-box-title-color: #6fc;  Forma de modificar estilos desde fuera Custom Properties*/
+            --eit-icon-color: blue;
+            --eit-icon-size: 48px;
+        }
+        card-box h1 {
+            color: red; /*No funciona por no llegar al shadow-dom */
+        }
+        .segunda {
+            --card-box-title-background-color: red;
+            --card-box-title-color: #fff;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Estilos LitElement</h1>
+
+    <span>En el index</span>
+
+    <card-box title="Prueba!!">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt harum ipsum facere enim quaerat non neque dolores saepe quibusdam atque laboriosam omnis impedit culpa debitis, amet architecto dicta. Soluta, suscipit.
+            <a href="#">Dos</a>
+        </p>
+        <a href="#">Uno</a>
+    </card-box>
+    <card-box hidden> 
+        hola!!
+    </card-box>
+
+    <card-box class="segunda" title="Mi titulo"> 
+        hola rojo
+    </card-box>
+
+    <card-box class="segunda"> 
+        hola rojo <eit-icon></eit-icon>
+    </card-box>
+
+
+    <p>
+        fadsfasdfa <eit-icon icon="bookmark"></eit-icon>
+    </p>
+
+    <user-avatar></user-avatar>
+    <user-avatar src="midesweb.jpg"></user-avatar>
+    <user-avatar src="justin.jpg"></user-avatar>
+
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="./src/index.js" type="module"></script>
 </body>
 </html>
