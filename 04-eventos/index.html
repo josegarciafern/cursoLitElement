@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clase 4 - Eventos</title>
+  <style>
+    
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;      
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Clase 4 - Eventos</h1>
+  
+  <eit-switch id="mys"></eit-switch>
+
+  <hr>
+
+  <menu-overlay>
+    <span slot="trigger">Abrir</span>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim aut alias perspiciatis repellendus, ex quidem minima obcaecati, iusto vel earum cupiditate animi sapiente, voluptatibus eligendi neque sit nulla nostrum ab?</p>
+    <p>Est ipsum doloremque quod laborum fuga non tempore similique enim quos repellendus necessitatibus accusantium consequuntur debitis nostrum consequatur repudiandae nobis, sunt minus adipisci neque aliquam quae. Quasi ut repellendus obcaecati.</p>
+  </menu-overlay>
+
+  <hr>
+
+  <todo-item task='{"name": "Primera task", "completed": true}'></todo-item>
+  <todo-item task='{"name": "Task no completada", "completed": false}'></todo-item>
+
+  <hr>
+  <todo-list></todo-list>
+
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script> 
+  <script src="src/index.js" type="module"></script>
+  <script>
+    document.getElementById('mys').addEventListener('eit-switch-checked', function(e) {
+      console.log('recuperado evento ', e.detail)
+    });
+    </script>
+</body>
+</html>
